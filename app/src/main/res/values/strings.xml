@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BodyCalcs</string>
+
+    <string-array name="Exercises">
+        <item> Upper Body</item>
+        <item> Lower Body</item>
+        <item> Bodyweight</item>
+        <item> Weighted Calisthenics</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3D4851"
+    tools:context=".OneRep">
+
+    <View
+        android:id="@+id/klatka"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#00E2FF"
+        app:layout_constraintBottom_toTopOf="@+id/wave"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/wave"
+        android:layout_width="415dp"
+        android:layout_height="115dp"
+        android:background="@drawable/ic_wavee_zielonyy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/klatka" />
+
+    <TextView
+        android:id="@+id/rpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:textColor="#FFF"
+        android:textColorHint="#8DFFFFFF"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/klatka"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch_Imperial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="176dp"
+        android:outlineSpotShadowColor="#2B2828"
+        android:text="Switch to Imperial"
+        android:textColor="#FFF"
+
+        android:textColorHint="#8DFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="311dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#FFF"
+        android:textColor="#FFF"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_Imperial" />
+
+    <FrameLayout
+        android:id="@+id/kalkulator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="#3D4851"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner">
+
+        <EditText
+            android:id="@+id/ciezar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="#FFF"
+            android:textColorHint="#8DFFFFFF" />
+
+        <EditText
+            android:id="@+id/reps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="reps"
+            android:inputType="number"
+            android:textColor="#FFF"
+            android:textColorHint="#8DFFFFFF" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/guzik"
+            android:text="Calculate"
+            android:textColor="#FFFFFF" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of the exercise:"
+        android:textColor="#8DFFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/spinner" />
+
+    <com.google.android.gms.ads.AdView
+
+        android:id="@+id/ad_banner_rep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="4dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

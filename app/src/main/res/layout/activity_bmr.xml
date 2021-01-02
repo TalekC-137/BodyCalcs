@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3D4851"
+    tools:context=".bmr">
+    <View
+        android:id="@+id/klatka"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#00E2FF"
+        app:layout_constraintBottom_toTopOf="@+id/wave"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/wave"
+        android:layout_width="415dp"
+        android:layout_height="115dp"
+        android:background="@drawable/ic_wavee_zielonyy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/klatka" />
+
+    <EditText
+        android:id="@+id/EditText_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="296dp"
+        android:ems="10"
+        android:hint="weight in kg"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_bmr_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/guzik"
+        android:text="calculate"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_activity" />
+
+    <EditText
+        android:id="@+id/EditText_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="296dp"
+        android:ems="10"
+        android:hint="height in cm"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFF"
+
+        android:textColorHint="#80FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/EditText_weight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/sw_ToImperial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="220dp"
+        android:text="Switch to Imperial"
+        android:textColor="#FFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_ft"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFF"
+        android:visibility="gone"
+        android:textColorHint="#80FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/EditText_weight"
+        app:layout_constraintTop_toBottomOf="@+id/sw_ToImperial" />
+
+    <EditText
+        android:id="@+id/et_inch"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFF"
+        android:visibility="gone"
+        android:textColorHint="#80FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/et_ft"
+        app:layout_constraintTop_toBottomOf="@+id/sw_ToImperial" />
+
+    <TextView
+        android:id="@+id/TextView_bmr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFF"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/klatka" />
+
+    <TextView
+        android:id="@+id/textView_bmrActiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView_bmr" />
+
+    <Spinner
+        android:id="@+id/spinner_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="160dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:hint="age"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditText_weight" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="127dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditText_weight">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="male" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="female" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewInfoBmr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="BMR (Basal Metabolic Rate) is the number of calories required to keep your body functioning at rest. BMR is also known as your body’s metabolism"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bmr_show" />
+
+    <TextView
+        android:id="@+id/textViewInfoNeeds"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="Your needed calories are calories needed to maintain your current weight based on your activity level"
+        android:textColor="#80FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfoBmr" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="activity level: "
+        android:textColor="#80FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_activity"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_save_bmr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/guzik"
+        android:text="save result"
+        android:textColor="#FFF"
+        app:layout_constraintEnd_toStartOf="@+id/btn_bmr_show"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_activity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
